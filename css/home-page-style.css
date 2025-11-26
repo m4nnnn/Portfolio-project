@@ -82,6 +82,7 @@ header {
     display: flex;
     justify-content: center;
     left:-100px;
+    min-height: 20vh;
 }
 
 .top-img-txt{
@@ -107,6 +108,11 @@ header {
 /* INDIVIDUAL EYES */
 .eye-left,
 .eye-right {
+    position: absolute;
+}
+
+#eyes,
+#eyes img {
     position: absolute;
 }
 
