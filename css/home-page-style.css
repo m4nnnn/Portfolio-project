@@ -1,6 +1,4 @@
-/* ----------------------------------
-   FONTS / RESET
----------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&family=Roboto:wght@300;400;500&display=swap');
 
 * {
@@ -9,9 +7,6 @@
     box-sizing: border-box;
 }
 
-/* ----------------------------------
-   TEXT STYLES
----------------------------------- */
 h1 {
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
@@ -27,9 +22,6 @@ p {
     color: #000;
 }
 
-/* ----------------------------------
-   HEADER + NAV
----------------------------------- */
 header {
     background-color: #fff;
     padding: 20px;
@@ -57,9 +49,6 @@ header {
     color: #5e0c0c;
 }
 
-/* ----------------------------------
-   TOP SECTION
----------------------------------- */
 .top-section {
     display: flex;
     justify-content: center;    
@@ -67,7 +56,7 @@ header {
     padding: 60px 10%;
     background: #ffffff;
 }
-/* LEFT COLUMN TEXT */
+
 .page-title {
     width: 100%;
     display: flex;
@@ -75,7 +64,7 @@ header {
     left:300px;
 }
 
-/* RIGHT COLUMN IMAGE */
+
 .image-block {
     width: 40%;             
     position: relative;
@@ -90,14 +79,14 @@ header {
     align-items: baseline;
 }
 
-/* FACE IMAGE */
+
 .face {
     width: 360px;
     height: auto;
     display: block;
 }
 
-/* EYES LAYER */
+
 .eye-div {
     position: absolute;   
     top: 145px;         
@@ -105,7 +94,6 @@ header {
     z-index: 9999;    
 }
 
-/* INDIVIDUAL EYES */
 .eye-left,
 .eye-right {
     position: absolute;
@@ -116,25 +104,137 @@ header {
     position: absolute;
 }
 
-/* left eye */
 .eye-left {
     left: -40px;
     top:-71px;
     width: 150px;
 }
 
-/* right eye */
 .eye-right {
    left: 30px;
    top:-50px;
     width: 170px;
 }
 
-/* ----------------------------------
-   INTRO TEXT SECTION
----------------------------------- */
 .introduction-section {
     padding: 40px 10%;
     background-color: #fff;
     margin-top: 40px;
 }
+
+
+/* ----------------------------------
+    RESPONSIVE
+---------------------------------- */
+
+/* max 1024px */
+@media (max-width: 1024px) {
+
+    .top-section {
+        padding: 40px 5%;
+        gap: 40px;
+    }
+
+    .image-block {
+        width: 45%;
+        left: 0;
+    }
+
+    .face {
+        width: 280px;
+    }
+
+    .eye-div {
+        top: 115px;
+        left: 85px;
+    }
+    .eye-left {
+        width: 120px;
+        left: -30px;
+        top: -60px;
+    }
+    .eye-right {
+        width: 130px;
+        left: 20px;
+        top: -45px;
+    }
+}
+
+/* max 768px */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .top-section {
+        flex-direction: column;
+        text-align: start;
+        padding: 50px 5%;
+    }
+
+    .page-title {
+        width: 100%;
+        align-items: center;
+    }
+
+    .image-block {
+        width: 100%;
+        left: 0;
+        margin-top: 20px;
+    }
+
+    .face {
+        width: 240px;
+    }
+
+
+    .eye-div {
+        top: 90px;
+        left: 60px;
+    }
+    .eye-left {
+        width: 90px;
+        top: -50px;
+        left: -20px;
+    }
+    .eye-right {
+        width: 100px;
+        top: -38px;
+        left: 15px;
+    }
+}
+
+/* max 480px */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .face {
+        width: 200px;
+    }
+
+    .eye-div {
+        top: 70px;
+        left: 45px;
+    }
+    .eye-left {
+        width: 70px;
+    }
+    .eye-right {
+        width: 75px;
+    }
+}
+
+
