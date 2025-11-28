@@ -15,6 +15,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2{
+    font-family: 'Rubik', sans-serif;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -120,6 +124,14 @@ header {
     padding: 40px 10%;
     background-color: #fff;
     margin-top: 40px;
+}
+
+.about-portfolio-projets{
+    padding: 40px 10%;
+
+    p{
+        margin-top: 40px;
+    }
 }
 
 
