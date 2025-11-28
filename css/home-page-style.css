@@ -52,10 +52,10 @@ header {
     color: #5e0c0c;
 }
 
-/* --- SECTION PRINCIPALE (Base : Desktop/Tablette) --- */
+/* --- SECTION PRINCIPALE --- */
 .top-section {
     display: flex;
-    flex-direction: row; /* Force l'alignement côte à côte */
+    flex-direction: row;
     justify-content: center;    
     align-items: center;               
     padding: 60px 10%;
@@ -65,7 +65,7 @@ header {
 
 
 .page-title {
-    flex: 1; /* Le texte prend toute la place restante */
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -74,7 +74,7 @@ header {
     width: 300px;
     height: 300px; 
     
-    /* Limites pour responsive */
+
     max-width: 90vw;
     max-height: 90vw;
     min-width: 200px;
@@ -84,7 +84,7 @@ header {
     cursor: pointer;
     image-rendering: pixelated;
     transition: transform 0.1s ease-out;
-    flex-shrink: 0; /* Empêche le bloc d'être écrasé */
+    flex-shrink: 0;
 }
 
 .block:hover{
@@ -140,128 +140,12 @@ header {
 }
 
 
-/* ----------------------------------
-    RESPONSIVE
----------------------------------- */
-
-/* max 1024px */
-@media (max-width: 1024px) {
-
-    .top-section {
-        padding: 40px 5%;
-        gap: 40px;
-    }
-
-    .image-block {
-        width: 45%;
-        left: 0;
-    }
-
-    .face {
-        width: 280px;
-    }
-
-    .eye-div {
-        top: 115px;
-        left: 85px;
-    }
-    .eye-left {
-        width: 120px;
-        left: -30px;
-        top: -60px;
-    }
-    .eye-right {
-        width: 130px;
-        left: 20px;
-        top: -45px;
-    }
-}
-
-/* max 768px */
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 36px;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .top-section {
-        flex-direction: column;
-        text-align: start;
-        padding: 50px 5%;
-    }
-
-    .page-title {
-        width: 100%;
-        align-items: center;
-    }
-
-    .image-block {
-        width: 100%;
-        left: 0;
-        margin-top: 20px;
-    }
-
-    .face {
-        width: 240px;
-    }
-
-
-    .eye-div {
-        top: 90px;
-        left: 60px;
-    }
-    .eye-left {
-        width: 90px;
-        top: -50px;
-        left: -20px;
-    }
-    .eye-right {
-        width: 100px;
-        top: -38px;
-        left: 15px;
-    }
-}
-
-/* max 480px */
-@media (max-width: 480px) {
-
-    h1 {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .face {
-        width: 200px;
-    }
-
-    .eye-div {
-        top: 70px;
-        left: 45px;
-    }
-    .eye-left {
-        width: 70px;
-    }
-    .eye-right {
-        width: 75px;
-    }
-}
-
-
-
 /* --- MEDIA QUERIES --- */
 
 /* MOBILE (Moins de 768px) */
 @media (max-width: 767px) {
     .top-section {
-        flex-direction: column-reverse; /* On empile : texte en dessous, bloc au dessus */
+        flex-direction: column-reverse; 
         padding: 40px 5%;
         text-align: center;
         gap: 30px;
@@ -273,7 +157,6 @@ header {
     }
 
     .block {
-        /* Taille adaptée mobile */
         width: 200px;
         height: 200px;
     }
@@ -282,7 +165,6 @@ header {
 /* TABLETTE (Entre 768px et 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .top-section {
-        /* On réduit un peu les marges sur les côtés pour que tout rentre */
         padding: 60px 2%; 
     }
     
