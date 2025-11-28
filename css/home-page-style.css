@@ -1,6 +1,3 @@
-/* ----------------------------------
-    FONTS / RESET
----------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&family=Roboto:wght@300;400;500&display=swap');
 
 * {
@@ -9,9 +6,6 @@
     box-sizing: border-box;
 }
 
-/* ----------------------------------
-    TEXT STYLES
----------------------------------- */
 h1 {
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
@@ -27,9 +21,6 @@ p {
     color: #000;
 }
 
-/* ----------------------------------
-    HEADER + NAV
----------------------------------- */
 header {
     background-color: #fff;
     padding: 20px;
@@ -57,41 +48,38 @@ header {
     color: #5e0c0c;
 }
 
-/* ----------------------------------
-    TOP SECTION
----------------------------------- */
+/* --- SECTION PRINCIPALE (Base : Desktop/Tablette) --- */
 .top-section {
     display: flex;
+    flex-direction: row; /* Force l'alignement côte à côte */
     justify-content: center;    
     align-items: center;               
     padding: 60px 10%;
     background: #ffffff;
+    gap: 40px;
 }
 
 .page-title {
-    width: 100%;
+    flex: 1; /* Le texte prend toute la place restante */
     display: flex;
     flex-direction: column;
-    left:300px;
 }
 
 .block {
     width: 300px;
     height: 300px; 
     
+    /* Limites pour responsive */
     max-width: 90vw;
     max-height: 90vw;
-    
     min-width: 200px;
     min-height: 200px;
     
     border: 1px solid #222; 
     cursor: pointer;
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
     transition: transform 0.1s ease-out;
+    flex-shrink: 0; /* Empêche le bloc d'être écrasé */
 }
 
 .block:hover{
@@ -132,22 +120,45 @@ header {
     background-size: contain;
 }
 
-/* ----------------------------------
-    INTRO TEXT SECTION
----------------------------------- */
 .introduction-section {
     padding: 40px 10%;
     background-color: #fff;
     margin-top: 40px;
 }
 
+/* --- MEDIA QUERIES --- */
+
+/* MOBILE (Moins de 768px) */
+@media (max-width: 767px) {
+    .top-section {
+        flex-direction: column-reverse; /* On empile : texte en dessous, bloc au dessus */
+        padding: 40px 5%;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .page-title {
+        width: 100%;
+        align-items: center;
+    }
+
+    .block {
+        /* Taille adaptée mobile */
+        width: 200px;
+        height: 200px;
+    }
+}
+
 /* TABLETTE (Entre 768px et 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
+    .top-section {
+        /* On réduit un peu les marges sur les côtés pour que tout rentre */
+        padding: 60px 2%; 
+    }
+    
     .block {
         width: 300px;
         height: 300px;
-        max-width: 300px;
-        max-height: 300px;
         min-width: 300px;
         min-height: 300px;
     }
@@ -158,8 +169,6 @@ header {
     .block {
         width: 360px;
         height: 360px;
-        max-width: 360px; 
-        max-height: 360px;
         min-width: 360px;
         min-height: 360px;
     }
