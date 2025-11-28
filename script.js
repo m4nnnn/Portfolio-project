@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     minecraftBlock.style.transform = 'scale(1)'; 
 
-
+    
     minecraftBlock.addEventListener('click', () => {
 
         clickSound.currentTime = 0;

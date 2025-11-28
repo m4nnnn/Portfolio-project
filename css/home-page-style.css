@@ -20,7 +20,7 @@ h2{
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     color: #000;
 }
@@ -95,9 +95,16 @@ header {
     transform: scale(0.9);
 }
 
+
 .top-img-txt{
     width: 80%;
     align-items: baseline;
+    font-size: 20px;
+    margin-top: 20px ;
+}
+
+.top-img-txt-2{
+    margin-top: 30px;
 }
 
 .grass-texture{
@@ -133,6 +140,11 @@ header {
 
 .about-portfolio-projets{
     padding: 40px 10%;
+
+    h2{
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
 
     p{
         margin-top: 40px;
