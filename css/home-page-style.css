@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&family=Roboto:wght@300;400;500&display=swap');
 
 * {
@@ -49,29 +48,50 @@ header {
     color: #5e0c0c;
 }
 
+/* ----------------------------------
+    TOP SECTION
+---------------------------------- */
 .top-section {
     display: flex;
+    flex-direction: row; 
     justify-content: center;    
     align-items: center;               
     padding: 60px 10%;
     background: #ffffff;
+    gap: 40px;
 }
 
 .page-title {
-    width: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    left:300px;
 }
 
+.block {
+    width: 300px;
+    height: 300px; 
+    
+    max-width: 90vw;
+    max-height: 90vw;
+    
+    min-width: 200px;
+    min-height: 200px;
+    
+    border: 1px solid #222; 
+    cursor: pointer;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    transition: transform 0.1s ease-out;
+}
 
-.image-block {
-    width: 40%;             
-    position: relative;
-    display: flex;
-    justify-content: center;
-    left:-100px;
-    min-height: 20vh;
+.block:hover{
+    transform: scale(1.05);
+}
+
+.block.is-mined {
+    transform: scale(0.9);
 }
 
 .top-img-txt{
@@ -122,60 +142,15 @@ header {
     margin-top: 40px;
 }
 
+/* --- MEDIA QUERIES --- */
 
-/* ----------------------------------
-    RESPONSIVE
----------------------------------- */
-
-/* max 1024px */
-@media (max-width: 1024px) {
-
+/* MOBILE (Moins de 768px) */
+@media (max-width: 767px) {
     .top-section {
+        flex-direction: column; 
         padding: 40px 5%;
-        gap: 40px;
-    }
-
-    .image-block {
-        width: 45%;
-        left: 0;
-    }
-
-    .face {
-        width: 280px;
-    }
-
-    .eye-div {
-        top: 115px;
-        left: 85px;
-    }
-    .eye-left {
-        width: 120px;
-        left: -30px;
-        top: -60px;
-    }
-    .eye-right {
-        width: 130px;
-        left: 20px;
-        top: -45px;
-    }
-}
-
-/* max 768px */
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 36px;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .top-section {
-        flex-direction: column;
-        text-align: start;
-        padding: 50px 5%;
+        text-align: center;
+        gap: 30px;
     }
 
     .page-title {
@@ -183,57 +158,33 @@ header {
         align-items: center;
     }
 
-    .image-block {
-        width: 100%;
-        left: 0;
-        margin-top: 20px;
-    }
-
-    .face {
-        width: 240px;
-    }
-
-
-    .eye-div {
-        top: 90px;
-        left: 60px;
-    }
-    .eye-left {
-        width: 90px;
-        top: -50px;
-        left: -20px;
-    }
-    .eye-right {
-        width: 100px;
-        top: -38px;
-        left: 15px;
+    .block {
+        width: 200px;
+        height: 200px;
     }
 }
 
-/* max 480px */
-@media (max-width: 480px) {
+/* TABLETTE (Entre 768px et 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .block {
+        width: 300px;
+        height: 300px;
+        max-width: 300px;
+        max-height: 300px;
+        min-width: 300px;
+        min-height: 300px;
+    }
+}
 
-    h1 {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .face {
-        width: 200px;
-    }
-
-    .eye-div {
-        top: 70px;
-        left: 45px;
-    }
-    .eye-left {
-        width: 70px;
-    }
-    .eye-right {
-        width: 75px;
+/* DESKTOP (992px et plus) */
+@media (min-width: 992px) {
+    .block {
+        width: 360px;
+        height: 360px;
+        max-width: 360px; 
+        max-height: 360px;
+        min-width: 360px;
+        min-height: 360px;
     }
 }
 
