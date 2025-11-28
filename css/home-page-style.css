@@ -48,9 +48,7 @@ header {
     color: #5e0c0c;
 }
 
-/* ----------------------------------
-    TOP SECTION
----------------------------------- */
+/* --- SECTION PRINCIPALE --- */
 .top-section {
     display: flex;
     flex-direction: row; 
@@ -70,20 +68,15 @@ header {
 .block {
     width: 300px;
     height: 300px; 
-    
     max-width: 90vw;
     max-height: 90vw;
-    
     min-width: 200px;
     min-height: 200px;
-    
     border: 1px solid #222; 
     cursor: pointer;
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
     transition: transform 0.1s ease-out;
+    flex-shrink: 0;
 }
 
 .block:hover{
@@ -166,11 +159,13 @@ header {
 
 /* TABLETTE (Entre 768px et 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
+    .top-section {
+        padding: 60px 2%; 
+    }
+    
     .block {
         width: 300px;
         height: 300px;
-        max-width: 300px;
-        max-height: 300px;
         min-width: 300px;
         min-height: 300px;
     }
