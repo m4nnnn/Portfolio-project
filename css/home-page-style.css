@@ -78,7 +78,7 @@ header {
 /* RIGHT COLUMN IMAGE */
 .block {
     width: 350px;
-    height: 300px;
+    height: 320px;
     border: 1px solid #222; 
     cursor: pointer;
     image-rendering: crisp-edges;
