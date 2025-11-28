@@ -76,58 +76,49 @@ header {
 }
 
 /* RIGHT COLUMN IMAGE */
-.image-block {
-    width: 40%;             
-    position: relative;
-    display: flex;
-    justify-content: center;
-    left:-100px;
-    min-height: 20vh;
+.block {
+    width: 350px;
+    height: 300px;
+    border: 1px solid #222; 
+    cursor: pointer;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    transition: transform 0.1s ease-out;
 }
 
+.block:hover{
+    transform: scale(1.05);
+}
 .top-img-txt{
     width: 80%;
     align-items: baseline;
 }
 
-/* FACE IMAGE */
-.face {
-    width: 360px;
-    height: auto;
-    display: block;
+.grass-texture{
+    background-image: url(../img/grass_block_side_512x512.png);
+    background-size: cover;
 }
 
-/* EYES LAYER */
-.eye-div {
-    position: absolute;   
-    top: 145px;         
-    left: 110px;
-    z-index: 9999;    
+.ice-texture{
+    background-image: url(../img/blue_ice_512x512.png);
+    background-size: cover;
 }
 
-/* INDIVIDUAL EYES */
-.eye-left,
-.eye-right {
-    position: absolute;
+.cobblestone-texture{
+    background-image: url(../img/cobblestone_512x512.png);
+    background-size: cover;
 }
 
-#eyes,
-#eyes img {
-    position: absolute;
+.jacko-texture{
+    background-image: url(../img/jack_o_lantern_512x512.png);
+    background-size: cover;
 }
 
-/* left eye */
-.eye-left {
-    left: -40px;
-    top:-71px;
-    width: 150px;
-}
-
-/* right eye */
-.eye-right {
-   left: 30px;
-   top:-50px;
-    width: 170px;
+.mangrove-texture{
+    background-image: url(../img/mangrove_log_top_512x512.png);
+    background-size: cover;
 }
 
 /* ----------------------------------
