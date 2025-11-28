@@ -1,5 +1,5 @@
 /* ----------------------------------
-   FONTS / RESET
+    FONTS / RESET
 ---------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&family=Roboto:wght@300;400;500&display=swap');
 
@@ -10,7 +10,7 @@
 }
 
 /* ----------------------------------
-   TEXT STYLES
+    TEXT STYLES
 ---------------------------------- */
 h1 {
     font-family: 'Rubik', sans-serif;
@@ -28,7 +28,7 @@ p {
 }
 
 /* ----------------------------------
-   HEADER + NAV
+    HEADER + NAV
 ---------------------------------- */
 header {
     background-color: #fff;
@@ -58,7 +58,7 @@ header {
 }
 
 /* ----------------------------------
-   TOP SECTION
+    TOP SECTION
 ---------------------------------- */
 .top-section {
     display: flex;
@@ -67,7 +67,7 @@ header {
     padding: 60px 10%;
     background: #ffffff;
 }
-/* LEFT COLUMN TEXT */
+
 .page-title {
     width: 100%;
     display: flex;
@@ -75,10 +75,16 @@ header {
     left:300px;
 }
 
-/* RIGHT COLUMN IMAGE */
 .block {
-    width: 350px;
-    height: 320px;
+    width: 300px;
+    height: 300px; 
+    
+    max-width: 90vw;
+    max-height: 90vw;
+    
+    min-width: 200px;
+    min-height: 200px;
+    
     border: 1px solid #222; 
     cursor: pointer;
     image-rendering: crisp-edges;
@@ -91,6 +97,11 @@ header {
 .block:hover{
     transform: scale(1.05);
 }
+
+.block.is-mined {
+    transform: scale(0.9);
+}
+
 .top-img-txt{
     width: 80%;
     align-items: baseline;
@@ -98,34 +109,58 @@ header {
 
 .grass-texture{
     background-image: url(../img/grass_block_side_512x512.png);
-    background-size: cover;
+    background-size: contain;
 }
 
 .ice-texture{
     background-image: url(../img/blue_ice_512x512.png);
-    background-size: cover;
+    background-size: contain;
 }
 
 .cobblestone-texture{
     background-image: url(../img/cobblestone_512x512.png);
-    background-size: cover;
+    background-size: contain;
 }
 
 .jacko-texture{
     background-image: url(../img/jack_o_lantern_512x512.png);
-    background-size: cover;
+    background-size: contain;
 }
 
 .mangrove-texture{
     background-image: url(../img/mangrove_log_top_512x512.png);
-    background-size: cover;
+    background-size: contain;
 }
 
 /* ----------------------------------
-   INTRO TEXT SECTION
+    INTRO TEXT SECTION
 ---------------------------------- */
 .introduction-section {
     padding: 40px 10%;
     background-color: #fff;
     margin-top: 40px;
+}
+
+/* TABLETTE (Entre 768px et 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .block {
+        width: 300px;
+        height: 300px;
+        max-width: 300px;
+        max-height: 300px;
+        min-width: 300px;
+        min-height: 300px;
+    }
+}
+
+/* DESKTOP (992px et plus) */
+@media (min-width: 992px) {
+    .block {
+        width: 360px;
+        height: 360px;
+        max-width: 360px; 
+        max-height: 360px;
+        min-width: 360px;
+        min-height: 360px;
+    }
 }
