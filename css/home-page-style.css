@@ -14,6 +14,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2{
+    font-family: 'Rubik', sans-serif;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -58,6 +62,7 @@ header {
     background: #ffffff;
     gap: 40px;
 }
+
 
 .page-title {
     flex: 1; /* Le texte prend toute la place restante */
@@ -125,6 +130,131 @@ header {
     background-color: #fff;
     margin-top: 40px;
 }
+
+.about-portfolio-projets{
+    padding: 40px 10%;
+
+    p{
+        margin-top: 40px;
+    }
+}
+
+
+/* ----------------------------------
+    RESPONSIVE
+---------------------------------- */
+
+/* max 1024px */
+@media (max-width: 1024px) {
+
+    .top-section {
+        padding: 40px 5%;
+        gap: 40px;
+    }
+
+    .image-block {
+        width: 45%;
+        left: 0;
+    }
+
+    .face {
+        width: 280px;
+    }
+
+    .eye-div {
+        top: 115px;
+        left: 85px;
+    }
+    .eye-left {
+        width: 120px;
+        left: -30px;
+        top: -60px;
+    }
+    .eye-right {
+        width: 130px;
+        left: 20px;
+        top: -45px;
+    }
+}
+
+/* max 768px */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .top-section {
+        flex-direction: column;
+        text-align: start;
+        padding: 50px 5%;
+    }
+
+    .page-title {
+        width: 100%;
+        align-items: center;
+    }
+
+    .image-block {
+        width: 100%;
+        left: 0;
+        margin-top: 20px;
+    }
+
+    .face {
+        width: 240px;
+    }
+
+
+    .eye-div {
+        top: 90px;
+        left: 60px;
+    }
+    .eye-left {
+        width: 90px;
+        top: -50px;
+        left: -20px;
+    }
+    .eye-right {
+        width: 100px;
+        top: -38px;
+        left: 15px;
+    }
+}
+
+/* max 480px */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .face {
+        width: 200px;
+    }
+
+    .eye-div {
+        top: 70px;
+        left: 45px;
+    }
+    .eye-left {
+        width: 70px;
+    }
+    .eye-right {
+        width: 75px;
+    }
+}
+
+
 
 /* --- MEDIA QUERIES --- */
 
